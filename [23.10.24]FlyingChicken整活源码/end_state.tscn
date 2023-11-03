@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkkwo7yrmbav1"]
+
+[ext_resource type="Script" path="res://end_state.gd" id="1_76ibb"]
+[ext_resource type="Texture2D" uid="uid://vf3w85j3lcbm" path="res://Art/结束游戏图片.png" id="1_e6mtk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ad1c6"]
+
+[node name="EndState" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_76ibb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 0.121569)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_ad1c6")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -168.0
+offset_right = 293.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_e6mtk")
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -154.0
+offset_right = 36.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "重新开始"
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -98.0
+offset_right = 68.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "返回首页"
+
+[connection signal="button_down" from="Restart" to="." method="_on_restart_button_down"]
+[connection signal="button_down" from="Menu" to="." method="_on_menu_button_down"]

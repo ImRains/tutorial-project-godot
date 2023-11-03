@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cm2ianinnhlpv"]
+
+[ext_resource type="Texture2D" uid="uid://b00iafjdetd4q" path="res://Art/玩家.png" id="1_0puh5"]
+[ext_resource type="Script" path="res://chicken.gd" id="1_ax28c"]
+[ext_resource type="AudioStream" uid="uid://dwa0ilcuuauhu" path="res://Sound/死亡.MP3" id="3_f5s88"]
+[ext_resource type="AudioStream" uid="uid://c3k2uanfdbigv" path="res://Sound/跳跃.MP3" id="4_xioiv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0h57e"]
+radius = 21.095
+
+[node name="Chicken" type="CharacterBody2D"]
+script = ExtResource("1_ax28c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0515306, 0.0515306)
+texture = ExtResource("1_0puh5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0h57e")
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_f5s88")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xioiv")

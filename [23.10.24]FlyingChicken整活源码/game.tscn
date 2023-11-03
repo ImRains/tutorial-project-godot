@@ -1,0 +1,553 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0sht31ysy2d6"]
+
+[ext_resource type="Texture2D" uid="uid://cd7ajakath3kf" path="res://Art/Background_2.png" id="1_aqv60"]
+[ext_resource type="PackedScene" uid="uid://cm2ianinnhlpv" path="res://chicken.tscn" id="1_cw8es"]
+[ext_resource type="PackedScene" uid="uid://b1sx616kldtqd" path="res://basketball.tscn" id="2_855ny"]
+[ext_resource type="Texture2D" uid="uid://ig1rp5el5dr2" path="res://Art/Background_1.png" id="2_lk7id"]
+[ext_resource type="PackedScene" uid="uid://bkkwo7yrmbav1" path="res://end_state.tscn" id="3_kj4u8"]
+[ext_resource type="AudioStream" uid="uid://bf4ursse204qw" path="res://Sound/游戏中.MP3" id="6_3q3bh"]
+
+[node name="Game" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1488, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_aqv60")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1488, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_lk7id")
+centered = false
+
+[node name="Chicken" parent="." instance=ExtResource("1_cw8es")]
+position = Vector2(58, 122)
+
+[node name="Camera2D" type="Camera2D" parent="Chicken"]
+limit_left = 0
+limit_top = 0
+limit_bottom = 648
+
+[node name="BasketballNode" type="Node2D" parent="."]
+
+[node name="Basketball" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(196, 557)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball2" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(356, 696)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball3" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(347, 71)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball4" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(519, 602)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball5" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(511, -27)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball6" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(703, 504)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball7" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(694, -146)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball8" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(199, -50)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball9" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(879, -152)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball10" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1051, 11)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball11" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1053, 627)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball12" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1234, 59)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball13" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(886, 512)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball14" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1236, 720)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball15" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1404, 618)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball16" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1564, 757)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball17" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1555, 132)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball18" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1727, 663)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball19" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1719, 34)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball20" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1911, 565)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball21" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1902, -85)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball22" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1407, 11)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball23" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2087, -91)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball24" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2259, 72)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball25" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2261, 688)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball26" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2442, 120)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball27" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2094, 573)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball28" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2444, 781)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball29" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2610, 638)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball30" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2770, 777)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball31" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2761, 152)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball32" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2933, 683)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball33" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2925, 54)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball34" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3117, 585)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball35" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3108, -65)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball36" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2613, 31)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball37" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3293, -71)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball38" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3465, 92)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball39" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3467, 708)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball40" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3648, 140)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball41" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3300, 593)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball42" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3650, 801)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball43" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(196, 557)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball44" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(356, 696)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball45" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(347, 71)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball46" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(519, 602)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball47" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(511, -27)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball48" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(703, 504)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball49" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(694, -146)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball50" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(199, -50)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball51" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(879, -152)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball52" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1051, 11)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball53" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1053, 627)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball54" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1234, 59)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball55" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(886, 512)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball56" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1236, 720)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball57" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1404, 618)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball58" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1564, 757)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball59" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1555, 132)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball60" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1727, 663)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball61" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1719, 34)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball62" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1911, 565)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball63" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1902, -85)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball64" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(1407, 11)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball65" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2087, -91)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball66" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2259, 72)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball67" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2261, 688)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball68" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2442, 120)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball69" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2094, 573)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball70" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2444, 781)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball71" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2610, 638)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball72" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2770, 777)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball73" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2761, 152)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball74" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2933, 683)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball75" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2925, 54)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball76" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3117, 585)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball77" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3108, -65)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball78" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(2613, 31)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball79" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3293, -71)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball80" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3465, 92)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball81" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3467, 708)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball82" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3648, 140)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball83" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3300, 593)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball84" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(3650, 801)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball85" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4003, 593)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball86" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4163, 732)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball87" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4154, 107)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball88" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4326, 638)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball89" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4318, 9)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball90" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4510, 540)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball91" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4501, -110)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball92" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4006, -14)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball93" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4686, -116)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball94" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4858, 47)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball95" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4860, 663)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball96" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5041, 95)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball97" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(4693, 548)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball98" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5043, 756)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball99" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5211, 654)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball100" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5371, 793)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball101" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5362, 168)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball102" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5534, 699)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball103" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5526, 70)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball104" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5718, 601)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball105" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5709, -49)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball106" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5214, 47)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball107" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5894, -55)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball108" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6066, 108)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball109" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6068, 724)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball110" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6249, 156)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball111" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(5901, 609)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball112" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6251, 817)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball113" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6417, 674)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball114" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6577, 813)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball115" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6568, 188)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball116" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6740, 719)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball117" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6732, 90)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball118" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6924, 621)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball119" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6915, -29)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball120" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(6420, 67)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball121" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(7100, -35)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball122" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(7272, 128)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball123" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(7274, 744)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball124" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(7455, 176)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball125" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(7107, 629)
+scale = Vector2(1.8, 1.8)
+
+[node name="Basketball126" parent="BasketballNode" instance=ExtResource("2_855ny")]
+position = Vector2(7457, 837)
+scale = Vector2(1.8, 1.8)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EndState" parent="CanvasLayer" instance=ExtResource("3_kj4u8")]
+visible = false
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3q3bh")
+autoplay = true

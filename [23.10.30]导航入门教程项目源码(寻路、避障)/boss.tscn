@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dshpao6d83nq8"]
+
+[ext_resource type="Texture2D" uid="uid://rmvknk04d8us" path="res://generic-rpg-pack_v0.4_(alpha-release)_vacaroxa/rpg-pack/atlas.png" id="1_cmgou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct8v4"]
+size = Vector2(20, 32)
+
+[node name="Boss" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+
+[node name="Graphic" type="Node2D" parent="."]
+position = Vector2(2, -2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphic"]
+texture = ExtResource("1_cmgou")
+region_enabled = true
+region_rect = Rect2(224, 184, 32, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ct8v4")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+radius = 30.0
