@@ -1,0 +1,156 @@
+[gd_scene load_steps=14 format=3 uid="uid://ks03wjblbb72"]
+
+[ext_resource type="Texture2D" uid="uid://fuj37qyc5gbe" path="res://Source/decorations/shop_anim.png" id="1_s23s6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fvwo"]
+atlas = ExtResource("1_s23s6")
+region = Rect2(0, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2xly"]
+atlas = ExtResource("1_s23s6")
+region = Rect2(118, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e656i"]
+atlas = ExtResource("1_s23s6")
+region = Rect2(236, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pkfj"]
+atlas = ExtResource("1_s23s6")
+region = Rect2(354, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmhyv"]
+atlas = ExtResource("1_s23s6")
+region = Rect2(472, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inals"]
+atlas = ExtResource("1_s23s6")
+region = Rect2(590, 0, 118, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s6b0b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fvwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2xly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e656i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pkfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmhyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inals")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_g601l"]
+offsets = PackedFloat32Array(0.0839161, 0.980186)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pjh4d"]
+gradient = SubResource("Gradient_g601l")
+fill = 1
+fill_from = Vector2(0.519231, 0.512821)
+fill_to = Vector2(0.865385, 0.117521)
+
+[sub_resource type="Animation" id="Animation_ro8jf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Light/PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Light/PointLight2D2:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+
+[sub_resource type="Animation" id="Animation_3kmrn"]
+resource_name = "light"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Light/PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.0, 0.0, 2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Light/PointLight2D2:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.0, 0.0, 2.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rjjs6"]
+_data = {
+"RESET": SubResource("Animation_ro8jf"),
+"light": SubResource("Animation_3kmrn")
+}
+
+[node name="Store" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_s6b0b")
+autoplay = "default"
+frame_progress = 0.733692
+
+[node name="Light" type="Node2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+position = Vector2(49, -29)
+color = Color(0.878431, 0.529412, 0.282353, 1)
+energy = 2.0
+texture = SubResource("GradientTexture2D_pjh4d")
+texture_scale = 0.6
+
+[node name="PointLight2D2" type="PointLight2D" parent="Light"]
+position = Vector2(-48, -29)
+color = Color(0.878431, 0.529412, 0.282353, 1)
+energy = 2.0
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_pjh4d")
+texture_scale = 0.6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rjjs6")
+}
+autoplay = "light"

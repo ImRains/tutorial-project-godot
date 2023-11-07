@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bj50fwg4xoqul"]
+
+[ext_resource type="Texture2D" uid="uid://clqgmix52wgui" path="res://Source/normal_map/azagaya.png" id="1_fwri2"]
+[ext_resource type="Texture2D" uid="uid://djm1yp15f51ft" path="res://Source/normal_map/azagaya_n.png" id="2_8tu1u"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xoeb6"]
+diffuse_texture = ExtResource("1_fwri2")
+normal_texture = ExtResource("2_8tu1u")
+
+[sub_resource type="Gradient" id="Gradient_bbw03"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cnh1t"]
+gradient = SubResource("Gradient_bbw03")
+fill = 1
+fill_from = Vector2(0.514957, 0.485043)
+fill_to = Vector2(0.972222, 0.376068)
+
+[node name="NormalMap" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CanvasTexture_xoeb6")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(18, 11)
+color = Color(1, 0, 0, 1)
+energy = 2.77
+texture = SubResource("GradientTexture2D_cnh1t")
+texture_scale = 1.8
+height = 10.0
